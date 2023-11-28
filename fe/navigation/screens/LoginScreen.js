@@ -9,13 +9,13 @@ const GoogleSignInButton = () => {
     const navigation = useNavigation()
     
     const signIn = () => {
-        navigation.replace('Home')
+        navigation.replace('Setting')
     }
     return (
         <View>
-            <TouchableOpacity style={styles.googleButton} onPress={signIn}>
+            <TouchableOpacity style={styles.googleSignInButton} onPress={signIn}>
                 <Icon name="google" style={styles.googleIcon} size={30}></Icon>
-                <Text style={styles.googleText}>Sign in with Google</Text>
+                <Text style={styles.googleSignInText}>Sign in with Google</Text>
             </TouchableOpacity>
         </View>
     )
@@ -58,14 +58,14 @@ const styles = StyleSheet.create({
 
     // New to FitnessApp?
     fitnessAppText: {
-        marginTop: 200, // Expand the Margin for the Text
+        marginTop: 100, // Expand the Margin for the Text
         fontSize: 20,
         color: '#BEBDC3',
     },
 
 
     // Google Button
-    googleButton: {
+    googleSignInButton: {
         marginTop: 10, // Expand the Margin for the Text
         alignItems: 'center',
         flexDirection: "row", 
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 5, // Depth Effect
         borderColor: "#171520", // Border Color
     },
-    googleText: {
+    googleSignInText: {
         color: '#BEBDC3',
         fontSize: 20,
         paddingLeft: 10
